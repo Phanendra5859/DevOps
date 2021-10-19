@@ -1,0 +1,16 @@
+[webserver]
+172.31.47.119 package=apache2
+172.31.1.159  package=httpd
+
+[webserver:vars]
+info_location=/var/www/html/info.php
+
+[dbserver]
+172.31.1.159
+
+[ubuntu]
+172.31.47.119
+localhost
+
+[centos]
+172.31.1.159
