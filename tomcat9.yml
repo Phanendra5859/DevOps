@@ -82,7 +82,7 @@
         state: started
     - name: create tomcat users file
       ansible.builtin.copy:
-        src: files/tomcat-users.xml
+        src: files/tomcat.users.xml
         dest: "{{ tomcat_users_config_location }}" 
     - name: create tomcat manager config
       ansible.builtin.copy:
