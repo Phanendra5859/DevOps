@@ -28,7 +28,7 @@
         state: present
     - name: Check if the latest directory in tomcat is present
       ansible.builtin.stat:
-        path: "{{ tomcat_home}}/latest"
+        path: "{{ tomcat_home }}/latest"
       register: tomcat_latest_dir
     - name: download the tomcat distribution
       get_url:
@@ -82,7 +82,7 @@
         state: started
     - name: copy tomcat users file
       ansible.builtin.copy:
-        src: files/tomcat-users.xml
+        src: files/tomcat.users.xml
         dest: "{{ tomcat_users_config_location }}"
     - name: copy tomcat manager config
       ansible.builtin.copy:
